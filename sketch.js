@@ -19,7 +19,7 @@ function setup() {
 	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
-	ball = new Ball(400,600,50);
+	ball = new Ball(200,450,70);
 
 	Engine.run(engine);
   
@@ -35,14 +35,12 @@ function draw() {
   dustbinObj.display();
   ball.display();
 
-  keyPressed();
-
 }
 
 function keyPressed() {
 
 	if(keyCode  === UP_ARROW) {
 
-	  Matter.Body.applyForce(ball.body,ball.body.position,{x:50,y:-50});
+	Matter.Body.applyForce(ball.body,ball.body.position,{x:130,y:-145});
 	}
 }
