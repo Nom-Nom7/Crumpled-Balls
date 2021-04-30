@@ -20,14 +20,16 @@ class Ball
 		World.add(world, this.body);
 	}
 
-	display()
+    display()
 	{
-          var ballpos = this.body.position;
-          push()
-          translate(ballpos.x,ballpos.y)
-          image(this.image,0,0,this.r,this.r)
+        var ballpos = this.body.position;
+        push()
+        translate(ballpos.x,ballpos.y)
+        rectMode(CENTER)
+        fill(255,0,255)
+      imageMode(CENTER);
+        image(this.image, 0,0,this.r, this.r)
           pop()
 			
 	}
-
 }
